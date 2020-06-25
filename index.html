@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to Murphy's Gym</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="home">
+    <header class="main">
+        <div class="cover">
+            <div class="navbar" id="navbar">
+                <h1 class="logo">
+                    <!-- <i class="fas fa-dumbbell"></i> -->
+                    <span>Murp</span><i class="fas fa-dumbbell"></i><span>y's</span> Gym
+                </h1>
+                <div class="nav-right">
+                    <nav>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#equipment">Equipment</a></li>
+                            <li><a href="#contactus">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                    <span class="callus">Call: 08020000000</span>
+                </div>
+            </div>
+            <div class="info">
+                <h1>Get That Perfect Body</h1>
+                <p>We are here for you</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="equipment">
+        <header id="equipment">
+            <h4>What we have to offer</h4>
+            <h2>EQUIPMENT</h2>
+            <p>Get the best gym equipment and services in the world</p>
+        </header>
+        <div class="images">
+            <div class="single-image">
+                <img src="equipment/1BallsAndDumbell.jpg" alt="Sample Image">
+                <img src="equipment/2BlackDumbell.jpg" alt="">
+            </div>
+            <div class="single-image">
+                <img src="equipment/3Gym.jpg" alt="">
+                <img src="equipment/4Discs.jpg" alt="">
+            </div>
+            <div class="single-image">
+                <img src="equipment/1BallsAndDumbell.jpg" alt="Sample Image">
+                <img src="equipment/2BlackDumbell.jpg" alt="">
+            </div>
+            <div class="single-image">
+                <img src="equipment/3Gym.jpg" alt="">
+                <img src="equipment/4Discs.jpg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Us Start -->
+    <section>
+        <div id="contactus">
+            <div class="contact contact-image">
+                <img src="contact.jpg" alt="contact us">
+            </div>
+            <div class="contact contact-form">
+                <div class="message">
+                    <h1>Request Callback</h1>
+                </div>
+                <form action="">
+                    <div class="form-control">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="name">Phone Number</label>
+                        <input type="text" name="phonenumber" id="phonenumber">
+                    </div>
+                    <div class="form-control">
+                        <a href="" class="btn">Send Info</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us End -->
+
+    <div class="footer">
+        <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+            <i class="fab fa-twitter"></i>
+        </div>
+        <p>Copyright &copy; 2020 Murphy Tech</p>
+    </div>
+</body>
+
+<script>
+    $("nav > ul > li > a").click(function(){
+        var elemId = $(this).attr('href');
+        $('html,body').animate({
+            scrollTop: $(elemId).offset().top}, 2000);
+        });
+
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction(){
+            if(document.body.scrollTop > 10 || document.documentElement.
+            scrollTop > 10){
+                document.getElementById('navbar').style.background = "rgba(134,125,125, 0.6)";
+                }
+                else
+                {
+                    document.getElementById('navbar').style.background="transparent";
+                }
+            }
+</script>
+
+</html>
